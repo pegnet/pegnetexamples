@@ -86,12 +86,22 @@ func main() {
 		panic(err)
 	}
 
+	balance, _ := payment.GetBalance(nil, cl)
+	if balance == 0 {
+		// You need entry credits to send a pegnet transaction.
+		// If you do not have any, the entry will not be submitted.
+		panic("no entry credits")
+	}
+
 	commit, err := entry.ComposeCreate(nil, cl, payment)
 	if err != nil {
 		panic(err)
 	}
 
 	fmt.Println("Transaction Sent")
+	// You can check the 'Entry Hash' on the factom explorer
 	fmt.Printf("Entry Hash : %s\n", entry.Hash.String())
+	// You can check the txid on the pExplorer
+	fmt.Printf("Txid       : 0-%s\n", entry.Hash.String())
 	fmt.Printf("Commit Hash: %s\n", commit.String())
 }
