@@ -14,6 +14,10 @@ package main
 // go mod edit -replace github.com/Factom-Asset-Tokens/factom=github.com/Emyrk/factom@rcd_full
 // go mod tidy
 //
+// You will also want this version of pegnetd (it will be released soon)
+//
+// go get github.com/pegnet/pegnetd/fat/fat2@eth_gateway
+//
 // This will use the right dependencies, but also keep your imports correct.
 // github.com/Factom-Asset-Tokens/factom is the upstream repo all changes in
 // the fork will eventually roll into.
