@@ -1,7 +1,7 @@
 package main
 
 // !!!		PLEASE READ		!!!
-// ---		Import Advice 	---
+// ---		Import Advice 		---
 // Pegnet has plans to integrate into the FAT ecosystem, but not at this time.
 // Because Pegnet is currently it's own project and ecosystem, it has outpaced
 // the FAT dependencies in some areas.
